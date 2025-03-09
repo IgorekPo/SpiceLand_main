@@ -231,7 +231,7 @@
         justify-content: space-between;
     }
     .header__nav-contacts {
-        bottom: 15%;
+        bottom: 10%;
         right: 2%;
         gap: 15px;
         font-size: 12px;
