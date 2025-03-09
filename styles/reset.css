@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+
+}
+body {
+    line-height: 1;
+    font-family: "Rufina", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+
+}
+body::-webkit-scrollbar{
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+body.lock{
+    overflow: hidden;
+}
+input {
+    outline:none;
+}
+
+main{
+    flex: 1 1 auto;
+}
+a{
+    text-decoration: none;
+    color:#fff;
+}
+li{
+    list-style-type: none;
+}
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-size: auto;
+}
+[class*='__conteiner'] {
+    max-width: 1645px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+button{
+    cursor: pointer;
+}
+

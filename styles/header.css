@@ -1,0 +1,242 @@
+.header {
+    background-color: #425118a3;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.header__body {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__menu {
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 55px;
+}
+.header__logo {
+    width: 307px;
+    z-index: 3;
+
+}
+.header__logo a img{
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(10px 5px 10px #fff);
+}
+.header__burger {
+    position: relative;
+    width: 40px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.header__burger span,
+.header__burger::before,
+.header__burger::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    transition: all 0.5s ease;
+
+}
+.header__burger span{
+    top: 47%;
+}
+.header__burger::before{
+    top: 0px;
+}
+.header__burger::after{
+    bottom: 0px;
+}
+
+.header__burger.active span{
+    opacity: 0;
+}
+.header__burger.active::before{
+    top: 10px;
+    transform: rotate(-45deg);
+}
+.header__burger.active::after{
+    bottom: 10px;
+    transform: rotate(45deg);
+
+}
+
+
+.header__links {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.5s ease;
+
+}
+.header__img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: relative;
+}
+.header__links::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#233000ac;
+    z-index: 1;
+}
+.header__navs {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: start;
+    left: 10%;
+    top: 30%;
+    z-index: 2;
+}
+.header__link {
+    font-size: 26px;
+    transition: all 0.5s ease;
+}
+.header__link:hover {
+    scale: 1.2;
+    filter: drop-shadow(5px 5px 5px black);
+
+}
+.header__links.active {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+}
+
+.header__nav-contacts {
+    position: absolute;
+    bottom: 30%;
+    right: 10%;
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+.header__nav-contacts h3{
+    text-transform: uppercase;
+}
+.header__nav-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.header__nav-adress {
+}
+.header__nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+.header__nav-socials a{
+    transition: all .5s ease;
+
+}
+.header__nav-socials a:hover {
+    scale: 1.2;
+    filter: invert(100%); 
+    -webkit-filter: invert(100%);
+}
+
+.header__contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    font-size: 18px;
+}
+.header__market{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header__spices-market,
+.header__materials-market,
+.header__tel  {
+    border: 1px solid white;
+    padding: 20px 46px;
+    transition: all .5s ease;
+    color: #4B191C;
+
+}
+
+
+.header__spices-market:hover,
+.header__materials-market:hover,
+.header__tel:hover {
+    scale: 1.1;
+    filter: drop-shadow(5px 5px 5px black);
+}
+
+@media (max-width:1244px){
+    .header__contacts {
+    font-size: 14px;
+    }
+    .header__spices-market,
+    .header__materials-market,
+    .header__tel  {
+    padding: 10px 23px;
+    }
+    .header__logo{
+        width: 216px;
+    }
+}
+
+@media (max-width:916px){
+    .header__market{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .header__contacts {
+        gap: 30px;
+    }
+    .header__spices-market{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width:767px){
+    .header__contacts{
+        display: none;
+    }
+    .header__menu{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .header__nav-contacts {
+        bottom: 5%;
+        right: 2%;
+        gap: 15px;
+        font-size: 12px;
+    }
+    .header__nav-socials img{
+        max-width: 20px;
+    }
+}
